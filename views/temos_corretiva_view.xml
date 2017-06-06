@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+  <act_window
+    id="temos_mcorretiva_action"
+    name="Ações Corretivas"
+    res_model="mcorretiva.mco_form"
+    view_mode="tree,form"
+  />
+
+  <menuitem
+    id="menu_temos_mcorretiva_report"
+    name="Manutenção Corretiva"
+    parent="temos_report.menu_temos_report"
+    sequence = "0"
+    action="temos_mcorretiva_action"
+  />
+
+  <record id="temos_mcorretiva_report_tree_view" model="ir.ui.view">
+    <field name="name">temos_mcorretiva_report_tree_view</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="mco_task_request_number" string="Incidente"/>
+        <field name="mco_task_customer_number" string="Cod. CGMP"/>
+        <field name="mco_task_customer_name" string="Posto"/>
+        <field name="mco_form_name"/>
+        <field name="mco_form_date_time"/>
+        <field name="mco_form_employee_firstname"/>
+        <field name="mco_form_station_first_line_flag" string="Pista 1"/>
+        <field name="mco_form_station_sec_line_flag" string="Pista 2"/>
+        <field name="mco_form_station_server_flag" string="Servidor"/>
+        <field name="mco_form_station_roof_flag" string="Teto"/>
+        <field name="mco_form_station_equipment_flag" string="Equipamentos"/>
+        <!--
+        <field name="mco_form_version"/>
+        <field name="mco_form_equipment_ids"/>
+        <field name="xml_source_filename"/>
+        <field name="mco_form_file_pic01" string="PIC01"/>
+        <field name="mco_form_file_pic02" string="PIC02"/>
+        <field name="mco_form_file_pic03" string="PIC03"/>
+        <field name="mco_form_file_pic04" string="PIC04"/>
+        <field name="mco_form_file_pic05" string="PIC05"/>
+        <field name="mco_form_file_pic06" string="PIC06"/>
+        <field name="mco_form_file_pic07" string="PIC07"/>
+        <field name="mco_form_file_pic08" string="PIC08"/>
+        <field name="mco_form_file_pic09" string="PIC09"/>
+        <field name="mco_form_file_pic10" string="PIC10"/>
+        <field name="mco_form_file_pic11" string="PIC11"/>
+        <field name="mco_form_file_pic12" string="PIC12"/>
+        <field name="mco_form_file_pic13" string="PIC13"/>
+        <field name="mco_form_file_pic14" string="PIC14"/>
+        <field name="mco_form_file_pic15" string="PIC15"/>
+        <field name="mco_form_file_pic16" string="PIC16"/>
+        <field name="mco_form_file_pic17" string="PIC17"/>
+        <field name="mco_form_file_pic18" string="PIC18"/>
+        <field name="mco_form_file_pic19" string="PIC19"/>
+        <field name="mco_form_file_pic20" string="PIC20"/>
+        <field name="mco_form_file_pic21" string="PIC21"/>
+        <field name="mco_form_file_pic22" string="PIC22"/>
+        <field name="mco_form_file_pic23" string="PIC23"/>
+        <field name="mco_form_file_pic24" string="PIC24"/>
+        <field name="mco_form_file_pic25" string="PIC25"/>
+        <field name="mco_form_file_pic26" string="PIC26"/>
+        <field name="mco_form_file_pic27" string="PIC27"/>
+        <field name="mco_form_file_pic28" string="PIC28"/>
+        -->
+      </tree>
+    </field>
+  </record>
+
+  <record id="temos_mcorretiva_report_form_view" model="ir.ui.view">
+    <field name="name">temos_mcorretiva_report_form_view</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field  name="arch" type="xml">
+      <form string="Manutenção Corretiva">
+        <header>
+          <!-- Aqui vão os botões -->
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <field name="mco_task_customer_number" string="Código do Posto"/>
+              <field name="mco_task_customer_name" string="Nome do Posto"/>
+              <field name="mco_task_request_number" string="Chamado"/>
+              <field name="mco_form_date_time" string="Data da Execução"/>
+              <field name="mco_form_employee_firstname" string="Responsável"/>
+              <field name="xml_source_filename" string="Arquivo XML da Corretiva"/>
+              <field name="mco_form_station_first_line_flag" string="Pista 1"/>
+              <field name="mco_form_station_sec_line_flag" string="Pista 2"/>
+              <field name="mco_form_station_server_flag" string="Servidor"/>
+              <field name="mco_form_station_roof_flag" string="Teto"/>
+              <field name="mco_form_station_equipment_flag" string="Equipamentos"/>
+            </group>
+            <group>
+              <!--<field name="image" widget="image" nolabel="1"/>-->
+            </group>
+          </group>
+          <group>
+            <notebook>
+              <page string="Materiais Inseridos no Posto">
+                <field name="mco_form_equipment_ids"/>
+              </page>
+              <page string="Fotos - EPI e EPCs">
+                <group>
+                  <field name="mco_form_file_pic01_img" widget="image"/>
+                  <field name="mco_form_file_pic02_img" widget="image"/>
+                </group>
+                <group>
+                  <field name="mco_form_file_pic09_img" widget="image"/>
+                </group>
+              </page>
+            </notebook>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
