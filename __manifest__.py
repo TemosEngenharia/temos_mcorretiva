@@ -31,7 +31,6 @@
     'summary': u'Permite a geração e envio dos relatórios no Odoo para a Temos Engenharia',
     'depends': ['base',
                 'temos',
-                'temos_report',
                ],
     'external_dependencies': {
         'python': [
