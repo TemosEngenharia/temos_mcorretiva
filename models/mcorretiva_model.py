@@ -9,6 +9,7 @@ class MCorretivaForm(models.Model):
     _sql_constraints = [('mcorretiva.mco_form', 'unique (xml_source_filename)', 'XML já foi importado anteriormente!')]
 
     mco_form_date_time = fields.Datetime(string = u'Data do Formulário')
+    mco_from_report_flag = fields.Boolean(string = u'Relatório enviado', default = False)
     xml_source_filename = fields.Char(string = u'XML importado!!!', default = '')
     mco_location_date = fields.Datetime(string = u'Data da Localização')
     mco_form_checkin_call_datetime = fields.Datetime(string = u'Horário da ligação de Check-in')
