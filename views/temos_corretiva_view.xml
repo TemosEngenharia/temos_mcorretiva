@@ -21,6 +21,7 @@
     <field name="model">mcorretiva.mco_form</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="id" string="Id"/>
         <field name="mco_task_request_number" string="Incidente"/>
         <field name="mco_task_customer_number" string="Cod. CGMP"/>
         <field name="mco_task_customer_name" string="Posto"/>
@@ -80,17 +81,13 @@
         <sheet>
           <group>
             <group>
+              <field name="mco_form_name"/>
               <field name="mco_task_customer_number" string="Código do Posto"/>
               <field name="mco_task_customer_name" string="Nome do Posto"/>
               <field name="mco_task_request_number" string="Chamado"/>
-              <field name="mco_form_date_time" string="Data da Execução"/>
-              <field name="mco_form_employee_firstname" string="Responsável"/>
-              <field name="xml_source_filename" string="Arquivo XML da Corretiva"/>
-              <field name="mco_form_station_first_line_flag" string="Pista 1"/>
-              <field name="mco_form_station_sec_line_flag" string="Pista 2"/>
-              <field name="mco_form_station_server_flag" string="Servidor"/>
-              <field name="mco_form_station_roof_flag" string="Teto"/>
-              <field name="mco_form_station_equipment_flag" string="Equipamentos"/>
+              <field name="mco_location_date" string="Término do SLA"/>
+              <field name="mco_task_external_creation_date" string="Início do SLA"/>
+              <field name="mco_delta_sla" string="SLA"/>
             </group>
             <group>
               <!--<field name="image" widget="image" nolabel="1"/>-->
