@@ -22,6 +22,7 @@
     <field name="arch" type="xml">
       <tree>
         <field name="id" string="Id"/>
+        <field name="mco_form_report_flag" string="Relatório"/>
         <field name="mco_task_request_number" string="Incidente"/>
         <field name="mco_task_customer_number" string="Cod. CGMP"/>
         <field name="mco_task_customer_name" string="Posto"/>
@@ -82,6 +83,7 @@
           <group>
             <group>
               <field name="mco_form_name"/>
+              <field name="mco_form_report_flag" string="Relatório"/>
               <field name="mco_task_customer_number" string="Código do Posto"/>
               <field name="mco_task_customer_name" string="Nome do Posto"/>
               <field name="mco_task_request_number" string="Chamado"/>
