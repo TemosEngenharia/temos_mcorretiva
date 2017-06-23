@@ -11,7 +11,7 @@
   <menuitem
     id="menu_temos_mcorretiva_report"
     name="Manutenção Corretiva"
-    parent="temos_report.menu_temos_report"
+    parent="temos.menu_temos"
     sequence = "0"
     action="temos_mcorretiva_action"
   />
