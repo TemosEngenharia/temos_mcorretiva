@@ -117,19 +117,19 @@ class MCorretivaFormFiles(models.Model):
     _name = 'mcorretiva.mco_form_files'
     _rec_name = 'id'
 
-    mco_form_file_guid = fields.Char(string=u'Guid da Foto')
-    mco_form_filename = fields.Char(string=u'Nome do arquivo da Foto')
-    mco_form_file_description = fields.Char(string=u'Descrição da Foto')
-    mco_form_file_data = fields.Char(string=u'Foto')
+    mco_form_file_guid = fields.Char(string = u'Guid da Foto')
+    mco_form_filename = fields.Char(string = u'Nome do arquivo da Foto')
+    mco_form_file_description = fields.Char(string = u'Descrição da Foto')
+    mco_form_file_data = fields.Char(string = u'Foto')
     mco_form_file_ids = fields.One2many('mcorretiva.mco_form_files', 'mco_form_file_id', u'Form File Id')
-    mco_form_file_id = fields.Many2one('mcorretiva.mco_form', u'Fotos', ondelete='cascade', required=True)
+    mco_form_file_id = fields.Many2one('mcorretiva.mco_form', u'Fotos', ondelete = 'cascade', required = True)
 
 class MCorretivaFormEquipments(models.Model):
     _name = 'mcorretiva.mco_form_equipments'
     _rec_name = 'mco_form_equip_name'
 
-    mco_form_equip_name = fields.Char(string=u'Equipamento', default='')
-    mco_form_equip_action = fields.Char(string=u'Ação', default='')
-    mco_form_equip_location = fields.Char(string=u'Local de Instalação ou Retirada', default='')
-    mco_form_equip_serial_number = fields.Char(string=u'Número de Série', default='')
-    mco_form_equip_id = fields.Many2one('mcorretiva.mco_form', u'Lista de Equipamentos', ondelete='cascade', required=True)
+    mco_form_equip_name = fields.Char(string = u'Equipamento', default = '')
+    mco_form_equip_action = fields.Char(string = u'Ação', default = '')
+    mco_form_equip_location = fields.Char(string = u'Local de Instalação ou Retirada', default = '')
+    mco_form_equip_serial_number = fields.Char(string = u'Número de Série', default = '')
+    mco_form_equip_id = fields.Many2one('mcorretiva.mco_form', u'Lista de Equipamentos', ondelete = 'cascade', required = True)
