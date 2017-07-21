@@ -92,7 +92,9 @@
               <field name="mco_delta_sla" string="SLA"/>
             </group>
             <group>
-              <!--<field name="image" widget="image" nolabel="1"/>-->
+              <field name="mco_form_station_first_line_activities" string="Atividades Pista Principal"/>
+              <field name="mco_form_station_sec_line_activities" string="Atividades Pista Secundária"/>
+              <field name="mco_form_station_server_activities" string="Atividades Servidores"/>
             </group>
           </group>
           <group>
